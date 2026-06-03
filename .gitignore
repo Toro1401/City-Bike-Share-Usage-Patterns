@@ -1,0 +1,16 @@
+# Data files
+citibike.duckdb
+Dataset/
+
+# Python cache and environments
+__pycache__/
+*.pyc
+.venv/
+venv/
+ENV/
+
+# Agent/IDE local configs
+.agents/
+.gemini/
+.idea/
+.vscode/

@@ -1,0 +1,21 @@
+start_station_name,end_station_name,trip_count,avg_duration_min
+Hamilton Park,Grove St PATH,49029,5.8
+Grove St PATH,Hamilton Park,37919,6.3
+Brunswick St,Grove St PATH,34084,5.3
+Marin Light Rail,Grove St PATH,32650,4.8
+Grove St PATH,Marin Light Rail,32500,5.2
+Liberty Light Rail,Liberty Light Rail,29302,56.3
+Dixon Mills,Grove St PATH,26032,3.9
+Hoboken Terminal - Hudson St & Hudson Pl,Hoboken Ave at Monmouth St,25262,8.8
+Van Vorst Park,Grove St PATH,24898,4.3
+Grove St PATH,Brunswick St,24431,6.2
+Grove St PATH,Liberty Light Rail,24026,10.9
+Liberty Light Rail,Grove St PATH,23504,9.4
+Brunswick & 6th,Grove St PATH,23209,6.3
+Grove St PATH,Dixon Mills,23037,5.2
+Jersey & 6th St,Grove St PATH,22866,4.4
+McGinley Square,Sip Ave,22855,4.7
+Newport Pkwy,Newport Pkwy,22554,35.6
+Newport PATH,Hamilton Park,21139,8.4
+Grove St PATH,Van Vorst Park,20172,5.4
+Sip Ave,McGinley Square,19577,5.4

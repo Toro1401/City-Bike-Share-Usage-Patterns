@@ -1,0 +1,21 @@
+user_type,start_station_name,end_station_name,trip_count,avg_duration_min
+casual,Liberty Light Rail,Liberty Light Rail,21470,62.4
+casual,South Waterfront Walkway - Sinatra Dr & 1 St,South Waterfront Walkway - Sinatra Dr & 1 St,14589,39.9
+casual,Hoboken Terminal - Hudson St & Hudson Pl,Hoboken Ave at Monmouth St,12726,10.1
+casual,Newport Pkwy,Newport Pkwy,9972,45.4
+casual,Hoboken Ave at Monmouth St,Hoboken Terminal - Hudson St & Hudson Pl,7993,8.5
+casual,12 St & Sinatra Dr N,South Waterfront Walkway - Sinatra Dr & 1 St,7140,13.4
+casual,12 St & Sinatra Dr N,12 St & Sinatra Dr N,6984,40.4
+casual,Marin Light Rail,Marin Light Rail,6336,52.7
+casual,JC Medical Center,JC Medical Center,6305,52.2
+casual,South Waterfront Walkway - Sinatra Dr & 1 St,12 St & Sinatra Dr N,6285,14.8
+member,Hamilton Park,Grove St PATH,46436,5.6
+member,Grove St PATH,Hamilton Park,35653,6.0
+member,Brunswick St,Grove St PATH,32289,5.1
+member,Marin Light Rail,Grove St PATH,30435,4.3
+member,Grove St PATH,Marin Light Rail,30355,4.7
+member,Dixon Mills,Grove St PATH,25103,3.8
+member,Van Vorst Park,Grove St PATH,24180,3.7
+member,Grove St PATH,Brunswick St,23186,6.0
+member,Grove St PATH,Dixon Mills,22255,5.0
+member,Jersey & 6th St,Grove St PATH,22247,4.2

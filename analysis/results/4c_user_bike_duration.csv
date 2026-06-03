@@ -1,0 +1,7 @@
+user_type,bike_type,trip_count,avg_duration_min,median_duration_min
+casual,classic_bike,875795,23.9,11.5
+casual,docked_bike,64459,36.7,18.2
+casual,electric_bike,590084,14.8,7.7
+member,classic_bike,3453214,9.6,6.0
+member,docked_bike,75790,13.5,7.7
+member,electric_bike,1322858,7.7,5.6

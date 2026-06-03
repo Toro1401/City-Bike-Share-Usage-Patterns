@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive dashboard analyzing 6.4M+ Citi Bike trips across Jersey City from 2015-2026. Explore station density, peak hours, and new station recommendations.">
+    <title>City Bike-Share Usage Patterns | JC Citi Bike Analytics</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Leaflet Heat -->
+    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- Loading Overlay -->
+<div class="loading-overlay" id="loading-overlay">
+    <div class="loading-spinner"></div>
+    <p class="loading-text">Loading 6.4M+ trips...</p>
+</div>
+
+<div class="app">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-title">
+            <span class="icon">&#x1F6B2;</span>
+            <div>
+                <h1>City Bike-Share Usage Patterns</h1>
+                <span class="subtitle">Jersey City Citi Bike &middot; 2015&ndash;2026</span>
+            </div>
+        </div>
+        <div class="header-actions">
+            <button class="btn active" id="btn-layer-stations" onclick="toggleLayer('stations')">
+                &#x1F4CD; Stations
+            </button>
+            <button class="btn" id="btn-layer-routes" onclick="toggleLayer('routes')">
+                &#x27A1; Routes
+            </button>
+            <button class="btn" id="btn-layer-heat" onclick="toggleLayer('heat')">
+                &#x1F525; Heatmap
+            </button>
+            <button class="btn" id="btn-layer-recs" onclick="toggleLayer('recs')">
+                &#x2B50; Recommendations
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- KPI Strip -->
+        <section class="kpi-strip" id="kpi-strip">
+            <div class="kpi-card">
+                <div class="label">Total Trips</div>
+                <div class="value" id="kpi-total-trips">--</div>
+                <div class="change positive" id="kpi-growth">Loading...</div>
+            </div>
+            <div class="kpi-card">
+                <div class="label">Active Stations</div>
+                <div class="value" id="kpi-stations">--</div>
+                <div class="change" id="kpi-stations-sub">across JC &amp; Hoboken</div>
+            </div>
+            <div class="kpi-card">
+                <div class="label">Avg Trip Duration</div>
+                <div class="value" id="kpi-duration">--</div>
+                <div class="change" id="kpi-duration-sub">median trip time</div>
+            </div>
+            <div class="kpi-card">
+                <div class="label">Member Rate</div>
+                <div class="value" id="kpi-member-pct">--</div>
+                <div class="change" id="kpi-member-sub">annual subscribers</div>
+            </div>
+            <div class="kpi-card">
+                <div class="label">Data Span</div>
+                <div class="value" id="kpi-span">--</div>
+                <div class="change" id="kpi-span-sub">years of data</div>
+            </div>
+        </section>
+
+        <!-- Map -->
+        <section class="map-container" id="map-wrapper">
+            <div id="map"></div>
+        </section>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <!-- Hourly Heatmap Panel -->
+            <div class="panel" id="panel-heatmap">
+                <div class="panel-header">
+                    <h3>Trip Volume by Day &amp; Hour</h3>
+                    <span class="badge">Heatmap</span>
+                </div>
+                <div class="panel-body">
+                    <div class="heatmap-container" id="heatmap-container"></div>
+                </div>
+            </div>
+
+            <!-- Top Stations Panel -->
+            <div class="panel" id="panel-stations">
+                <div class="panel-header">
+                    <h3>Top Stations</h3>
+                    <span class="badge" id="stations-count-badge">--</span>
+                </div>
+                <div class="panel-body">
+                    <ul class="station-list" id="station-list"></ul>
+                </div>
+            </div>
+
+            <!-- User Type Panel -->
+            <div class="panel" id="panel-users">
+                <div class="panel-header">
+                    <h3>Rider Breakdown</h3>
+                    <span class="badge">All Time</span>
+                </div>
+                <div class="panel-body">
+                    <div class="user-bar" id="user-bar">
+                        <div class="user-bar-member" id="user-bar-member"></div>
+                        <div class="user-bar-casual" id="user-bar-casual"></div>
+                    </div>
+                    <div class="user-stats">
+                        <div class="user-stat">
+                            <div><span class="dot member"></span><span class="label">Members</span></div>
+                            <div class="value" id="user-member-count" style="color: var(--accent-blue);">--</div>
+                        </div>
+                        <div class="user-stat">
+                            <div><span class="dot casual"></span><span class="label">Casual</span></div>
+                            <div class="value" id="user-casual-count" style="color: var(--accent-orange);">--</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monthly Trend Panel -->
+            <div class="panel" id="panel-trend">
+                <div class="panel-header">
+                    <h3>Monthly Ridership</h3>
+                    <span class="badge">Timeline</span>
+                </div>
+                <div class="panel-body">
+                    <div class="mini-chart">
+                        <canvas id="chart-monthly"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommendations Panel -->
+            <div class="panel" id="panel-recs">
+                <div class="panel-header">
+                    <h3>New Station Recommendations</h3>
+                    <span class="badge" style="background: rgba(16,185,129,0.12); color: var(--accent-green);">AI-Powered</span>
+                </div>
+                <div class="panel-body" id="recs-list">
+                    <p style="color: var(--text-muted); font-size: 0.75rem;">Loading recommendations...</p>
+                </div>
+            </div>
+        </aside>
+    </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
