@@ -51,3 +51,7 @@ Use departure/arrival differences to shortlist sites for operational investigati
 `analysis/setup_database.py`, `run_analysis.py`, `export_dashboard_data.py`, `sql_queries.sql`, `station_recommendations.py` and old `dashboard/data/` files are historical exploration. The supported path is `ingest.py` → `build_portfolio.py` → `dashboard/audited/` + `dashboard/index.html`. The old station recommendation claims are superseded; do not use old generated files as operational evidence.
 
 No full-year comparison is displayed unless both years span January–December with 12 observed months. 2015, 2017 and 2026 are not eligible as full-year periods. Twelve observed months alone do not prove upstream source completeness.
+
+## Repeatable verification
+
+Run `python scripts/verify.py` in the project Python environment. It validates local documentation links and executes the reviewed command arrays in `ai-toolkit.json` without a shell. Read the manifest before running. Results are saved locally in `.verification/latest.json` (ignored by Git). Dashboard projects also require Node.js on PATH for their JavaScript/filter smoke checks. Passing local checks does not establish actual-browser, deployment or live-service acceptance. See AGENTS.md and CLAUDE.md for cross-client workflow instructions.

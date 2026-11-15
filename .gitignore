@@ -20,3 +20,5 @@ ENV/
 *.sqlite
 *.db
 *.building*
+
+.verification/
