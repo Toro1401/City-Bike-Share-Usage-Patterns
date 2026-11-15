@@ -14,3 +14,9 @@ ENV/
 .gemini/
 .idea/
 .vscode/
+
+*.duckdb
+*.duckdb.wal
+*.sqlite
+*.db
+*.building*

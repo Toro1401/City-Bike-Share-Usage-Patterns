@@ -1,3 +1,4 @@
+# Historical exploration; superseded by ingest.py and build_portfolio.py. See README.md.
 """
 run_analysis.py — Execute SQL queries against DuckDB and generate charts.
 

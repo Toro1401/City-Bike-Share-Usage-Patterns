@@ -1,0 +1,1161 @@
+{
+  "raw_rows": 6449990,
+  "exact_duplicates_removed": 0,
+  "quarantined_ambiguous_or_null_id_rows": 48,
+  "excluded_duration_or_time": 67790,
+  "valid_trips": 6382152,
+  "conflicting_ride_ids": 24,
+  "missing_months": [
+    "2017-08"
+  ],
+  "missing_id_or_name_endpoints": 15124,
+  "station_year_coordinate_flags": 564,
+  "historical_station_observations": 3151,
+  "provenance": "Strict CSV import: all source records accounted for in ingestion_manifest; no malformed CSV records silently skipped.",
+  "checks": "Year/month/hour counts reconcile to valid trips; station endpoint counts reconcile to nonmissing IDs and names.",
+  "ingestion_manifest": [
+    {
+      "filename": "JC-201509-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 6668,
+      "imported_rows": 6668,
+      "invalid_times": 0,
+      "invalid_durations": 9,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201510-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 19264,
+      "imported_rows": 19264,
+      "invalid_times": 0,
+      "invalid_durations": 16,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201511-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 15113,
+      "imported_rows": 15113,
+      "invalid_times": 2,
+      "invalid_durations": 2,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201512-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 11838,
+      "imported_rows": 11838,
+      "invalid_times": 0,
+      "invalid_durations": 9,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201604-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 16342,
+      "imported_rows": 16342,
+      "invalid_times": 0,
+      "invalid_durations": 3,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201605-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 19488,
+      "imported_rows": 19488,
+      "invalid_times": 0,
+      "invalid_durations": 6,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201606-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 23947,
+      "imported_rows": 23947,
+      "invalid_times": 0,
+      "invalid_durations": 7,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201607-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 24436,
+      "imported_rows": 24436,
+      "invalid_times": 0,
+      "invalid_durations": 7,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201608-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 34149,
+      "imported_rows": 34149,
+      "invalid_times": 0,
+      "invalid_durations": 12,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201609-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 33425,
+      "imported_rows": 33425,
+      "invalid_times": 0,
+      "invalid_durations": 16,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-20161-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 7479,
+      "imported_rows": 7479,
+      "invalid_times": 0,
+      "invalid_durations": 6,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201610-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 29611,
+      "imported_rows": 29611,
+      "invalid_times": 0,
+      "invalid_durations": 8,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201611-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 21832,
+      "imported_rows": 21832,
+      "invalid_times": 2,
+      "invalid_durations": 7,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201612-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 15114,
+      "imported_rows": 15114,
+      "invalid_times": 0,
+      "invalid_durations": 5,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-20162-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 8250,
+      "imported_rows": 8250,
+      "invalid_times": 0,
+      "invalid_durations": 5,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-20163-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 13511,
+      "imported_rows": 13511,
+      "invalid_times": 0,
+      "invalid_durations": 11,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201701-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 12926,
+      "imported_rows": 12926,
+      "invalid_times": 0,
+      "invalid_durations": 4,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201702-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 14026,
+      "imported_rows": 14026,
+      "invalid_times": 0,
+      "invalid_durations": 6,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201703-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 12201,
+      "imported_rows": 12201,
+      "invalid_times": 0,
+      "invalid_durations": 7,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201704-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 21186,
+      "imported_rows": 21186,
+      "invalid_times": 0,
+      "invalid_durations": 10,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201705-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 25966,
+      "imported_rows": 25966,
+      "invalid_times": 0,
+      "invalid_durations": 23,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201706-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 32060,
+      "imported_rows": 32060,
+      "invalid_times": 0,
+      "invalid_durations": 19,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201707-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 33573,
+      "imported_rows": 33573,
+      "invalid_times": 0,
+      "invalid_durations": 9,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201709-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 33119,
+      "imported_rows": 33119,
+      "invalid_times": 0,
+      "invalid_durations": 6,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201710-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 34919,
+      "imported_rows": 34919,
+      "invalid_times": 0,
+      "invalid_durations": 6,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201711-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 23582,
+      "imported_rows": 23582,
+      "invalid_times": 0,
+      "invalid_durations": 7,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201712-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 15898,
+      "imported_rows": 15898,
+      "invalid_times": 0,
+      "invalid_durations": 2,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201801-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 12677,
+      "imported_rows": 12677,
+      "invalid_times": 0,
+      "invalid_durations": 2,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201802-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 15104,
+      "imported_rows": 15104,
+      "invalid_times": 0,
+      "invalid_durations": 4,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201803-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 17109,
+      "imported_rows": 17109,
+      "invalid_times": 0,
+      "invalid_durations": 7,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201804-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 23634,
+      "imported_rows": 23634,
+      "invalid_times": 0,
+      "invalid_durations": 8,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201805-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 34456,
+      "imported_rows": 34456,
+      "invalid_times": 0,
+      "invalid_durations": 19,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201806-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 40937,
+      "imported_rows": 40937,
+      "invalid_times": 0,
+      "invalid_durations": 24,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201807-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 42268,
+      "imported_rows": 42268,
+      "invalid_times": 0,
+      "invalid_durations": 13,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201808-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 44432,
+      "imported_rows": 44432,
+      "invalid_times": 0,
+      "invalid_durations": 14,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201809-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 39022,
+      "imported_rows": 39022,
+      "invalid_times": 0,
+      "invalid_durations": 15,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201810-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 39138,
+      "imported_rows": 39138,
+      "invalid_times": 0,
+      "invalid_durations": 10,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201811-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 24910,
+      "imported_rows": 24910,
+      "invalid_times": 0,
+      "invalid_durations": 11,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201812-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 20205,
+      "imported_rows": 20205,
+      "invalid_times": 0,
+      "invalid_durations": 8,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201901-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 19676,
+      "imported_rows": 19676,
+      "invalid_times": 0,
+      "invalid_durations": 2,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201902-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 18565,
+      "imported_rows": 18565,
+      "invalid_times": 0,
+      "invalid_durations": 9,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201903-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 23606,
+      "imported_rows": 23606,
+      "invalid_times": 0,
+      "invalid_durations": 6,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201904-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 33056,
+      "imported_rows": 33056,
+      "invalid_times": 0,
+      "invalid_durations": 11,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201905-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 36135,
+      "imported_rows": 36135,
+      "invalid_times": 0,
+      "invalid_durations": 21,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201906-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 39430,
+      "imported_rows": 39430,
+      "invalid_times": 0,
+      "invalid_durations": 24,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201907-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 43746,
+      "imported_rows": 43746,
+      "invalid_times": 0,
+      "invalid_durations": 27,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201908-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 48711,
+      "imported_rows": 48711,
+      "invalid_times": 0,
+      "invalid_durations": 14,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201909-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 49244,
+      "imported_rows": 49244,
+      "invalid_times": 0,
+      "invalid_durations": 16,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201910-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 42253,
+      "imported_rows": 42253,
+      "invalid_times": 0,
+      "invalid_durations": 9,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201911-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 30797,
+      "imported_rows": 30797,
+      "invalid_times": 0,
+      "invalid_durations": 7,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-201912-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 19728,
+      "imported_rows": 19728,
+      "invalid_times": 0,
+      "invalid_durations": 4,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-202001-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 26020,
+      "imported_rows": 26020,
+      "invalid_times": 0,
+      "invalid_durations": 7,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-202002-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 22962,
+      "imported_rows": 22962,
+      "invalid_times": 0,
+      "invalid_durations": 13,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-202003-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 17719,
+      "imported_rows": 17719,
+      "invalid_times": 0,
+      "invalid_durations": 15,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-202004-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 9268,
+      "imported_rows": 9268,
+      "invalid_times": 0,
+      "invalid_durations": 13,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-202005-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 25077,
+      "imported_rows": 25077,
+      "invalid_times": 0,
+      "invalid_durations": 39,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-202006-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 36921,
+      "imported_rows": 36921,
+      "invalid_times": 0,
+      "invalid_durations": 54,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-202007-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 38680,
+      "imported_rows": 38680,
+      "invalid_times": 0,
+      "invalid_durations": 36,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-202008-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 43267,
+      "imported_rows": 43267,
+      "invalid_times": 0,
+      "invalid_durations": 42,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-202009-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 53833,
+      "imported_rows": 53833,
+      "invalid_times": 0,
+      "invalid_durations": 37,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-202010-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 30086,
+      "imported_rows": 30086,
+      "invalid_times": 0,
+      "invalid_durations": 19,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-202011-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 21275,
+      "imported_rows": 21275,
+      "invalid_times": 0,
+      "invalid_durations": 18,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-202012-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 11694,
+      "imported_rows": 11694,
+      "invalid_times": 0,
+      "invalid_durations": 11,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-202101-citibike-tripdata.csv",
+      "schema_version": "old",
+      "source_rows": 11624,
+      "imported_rows": 11624,
+      "invalid_times": 0,
+      "invalid_durations": 6,
+      "missing_coordinates": 0
+    },
+    {
+      "filename": "JC-202102-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 4881,
+      "imported_rows": 4881,
+      "invalid_times": 4,
+      "invalid_durations": 98,
+      "missing_coordinates": 68
+    },
+    {
+      "filename": "JC-202103-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 17123,
+      "imported_rows": 17123,
+      "invalid_times": 9,
+      "invalid_durations": 233,
+      "missing_coordinates": 77
+    },
+    {
+      "filename": "JC-202104-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 23774,
+      "imported_rows": 23774,
+      "invalid_times": 3,
+      "invalid_durations": 380,
+      "missing_coordinates": 92
+    },
+    {
+      "filename": "JC-202105-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 45043,
+      "imported_rows": 45043,
+      "invalid_times": 4,
+      "invalid_durations": 643,
+      "missing_coordinates": 89
+    },
+    {
+      "filename": "JC-202106-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 71442,
+      "imported_rows": 71442,
+      "invalid_times": 1,
+      "invalid_durations": 1554,
+      "missing_coordinates": 181
+    },
+    {
+      "filename": "JC-202107-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 82578,
+      "imported_rows": 82578,
+      "invalid_times": 3,
+      "invalid_durations": 2152,
+      "missing_coordinates": 371
+    },
+    {
+      "filename": "JC-202108-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 93821,
+      "imported_rows": 93821,
+      "invalid_times": 22,
+      "invalid_durations": 3148,
+      "missing_coordinates": 364
+    },
+    {
+      "filename": "JC-202109-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 97313,
+      "imported_rows": 97313,
+      "invalid_times": 13,
+      "invalid_durations": 2819,
+      "missing_coordinates": 420
+    },
+    {
+      "filename": "JC-202110-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 88762,
+      "imported_rows": 88762,
+      "invalid_times": 0,
+      "invalid_durations": 1679,
+      "missing_coordinates": 220
+    },
+    {
+      "filename": "JC-202111-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 60061,
+      "imported_rows": 60061,
+      "invalid_times": 7,
+      "invalid_durations": 1024,
+      "missing_coordinates": 204
+    },
+    {
+      "filename": "JC-202112-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 48021,
+      "imported_rows": 48021,
+      "invalid_times": 0,
+      "invalid_durations": 988,
+      "missing_coordinates": 146
+    },
+    {
+      "filename": "JC-202201-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 26762,
+      "imported_rows": 26762,
+      "invalid_times": 0,
+      "invalid_durations": 702,
+      "missing_coordinates": 179
+    },
+    {
+      "filename": "JC-202202-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 31911,
+      "imported_rows": 31911,
+      "invalid_times": 0,
+      "invalid_durations": 691,
+      "missing_coordinates": 75
+    },
+    {
+      "filename": "JC-202203-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 51671,
+      "imported_rows": 51671,
+      "invalid_times": 0,
+      "invalid_durations": 980,
+      "missing_coordinates": 72
+    },
+    {
+      "filename": "JC-202204-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 62528,
+      "imported_rows": 62528,
+      "invalid_times": 0,
+      "invalid_durations": 1273,
+      "missing_coordinates": 122
+    },
+    {
+      "filename": "JC-202205-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 80482,
+      "imported_rows": 80482,
+      "invalid_times": 1,
+      "invalid_durations": 1700,
+      "missing_coordinates": 180
+    },
+    {
+      "filename": "JC-202206-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 103299,
+      "imported_rows": 103299,
+      "invalid_times": 0,
+      "invalid_durations": 2348,
+      "missing_coordinates": 295
+    },
+    {
+      "filename": "JC-202207-citbike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 108502,
+      "imported_rows": 108502,
+      "invalid_times": 0,
+      "invalid_durations": 2620,
+      "missing_coordinates": 320
+    },
+    {
+      "filename": "JC-202208-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 115231,
+      "imported_rows": 115231,
+      "invalid_times": 2,
+      "invalid_durations": 2594,
+      "missing_coordinates": 220
+    },
+    {
+      "filename": "JC-202209-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 104247,
+      "imported_rows": 104247,
+      "invalid_times": 0,
+      "invalid_durations": 2306,
+      "missing_coordinates": 179
+    },
+    {
+      "filename": "JC-202210-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 89558,
+      "imported_rows": 89558,
+      "invalid_times": 1,
+      "invalid_durations": 2059,
+      "missing_coordinates": 145
+    },
+    {
+      "filename": "JC-202211-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 72709,
+      "imported_rows": 72709,
+      "invalid_times": 8,
+      "invalid_durations": 1748,
+      "missing_coordinates": 100
+    },
+    {
+      "filename": "JC-202212-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 48585,
+      "imported_rows": 48585,
+      "invalid_times": 0,
+      "invalid_durations": 1463,
+      "missing_coordinates": 83
+    },
+    {
+      "filename": "JC-202301-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 56075,
+      "imported_rows": 56075,
+      "invalid_times": 0,
+      "invalid_durations": 1658,
+      "missing_coordinates": 52
+    },
+    {
+      "filename": "JC-202302-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 51213,
+      "imported_rows": 51213,
+      "invalid_times": 0,
+      "invalid_durations": 1720,
+      "missing_coordinates": 38
+    },
+    {
+      "filename": "JC-202303-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 63072,
+      "imported_rows": 63072,
+      "invalid_times": 0,
+      "invalid_durations": 2167,
+      "missing_coordinates": 57
+    },
+    {
+      "filename": "JC-202304-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 80688,
+      "imported_rows": 80688,
+      "invalid_times": 0,
+      "invalid_durations": 2105,
+      "missing_coordinates": 78
+    },
+    {
+      "filename": "JC-202305-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 96002,
+      "imported_rows": 96002,
+      "invalid_times": 0,
+      "invalid_durations": 2227,
+      "missing_coordinates": 137
+    },
+    {
+      "filename": "JC-202306-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 97023,
+      "imported_rows": 97023,
+      "invalid_times": 0,
+      "invalid_durations": 1970,
+      "missing_coordinates": 88
+    },
+    {
+      "filename": "JC-202307-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 106608,
+      "imported_rows": 106608,
+      "invalid_times": 1,
+      "invalid_durations": 2193,
+      "missing_coordinates": 122
+    },
+    {
+      "filename": "JC-202308-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 112027,
+      "imported_rows": 112027,
+      "invalid_times": 1,
+      "invalid_durations": 2307,
+      "missing_coordinates": 120
+    },
+    {
+      "filename": "JC-202309-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 94233,
+      "imported_rows": 94233,
+      "invalid_times": 0,
+      "invalid_durations": 1895,
+      "missing_coordinates": 102
+    },
+    {
+      "filename": "JC-202310-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 97584,
+      "imported_rows": 97584,
+      "invalid_times": 1,
+      "invalid_durations": 2393,
+      "missing_coordinates": 87
+    },
+    {
+      "filename": "JC-202311-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 75646,
+      "imported_rows": 75646,
+      "invalid_times": 4,
+      "invalid_durations": 1653,
+      "missing_coordinates": 31
+    },
+    {
+      "filename": "JC-202312-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 58680,
+      "imported_rows": 58680,
+      "invalid_times": 0,
+      "invalid_durations": 1280,
+      "missing_coordinates": 42
+    },
+    {
+      "filename": "JC-202401-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 50661,
+      "imported_rows": 50661,
+      "invalid_times": 0,
+      "invalid_durations": 1297,
+      "missing_coordinates": 21
+    },
+    {
+      "filename": "JC-202402-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 55613,
+      "imported_rows": 55613,
+      "invalid_times": 0,
+      "invalid_durations": 1194,
+      "missing_coordinates": 16
+    },
+    {
+      "filename": "JC-202403-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 65581,
+      "imported_rows": 65581,
+      "invalid_times": 0,
+      "invalid_durations": 1266,
+      "missing_coordinates": 17
+    },
+    {
+      "filename": "JC-202404-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 79116,
+      "imported_rows": 79116,
+      "invalid_times": 0,
+      "invalid_durations": 1541,
+      "missing_coordinates": 21
+    },
+    {
+      "filename": "JC-202405-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 97479,
+      "imported_rows": 97479,
+      "invalid_times": 0,
+      "invalid_durations": 2047,
+      "missing_coordinates": 48
+    },
+    {
+      "filename": "JC-202406-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 111115,
+      "imported_rows": 111115,
+      "invalid_times": 0,
+      "invalid_durations": 57,
+      "missing_coordinates": 54
+    },
+    {
+      "filename": "JC-202407-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 112443,
+      "imported_rows": 112443,
+      "invalid_times": 0,
+      "invalid_durations": 56,
+      "missing_coordinates": 55
+    },
+    {
+      "filename": "JC-202408-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 106451,
+      "imported_rows": 106451,
+      "invalid_times": 0,
+      "invalid_durations": 38,
+      "missing_coordinates": 37
+    },
+    {
+      "filename": "JC-202409-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 115558,
+      "imported_rows": 115558,
+      "invalid_times": 0,
+      "invalid_durations": 27,
+      "missing_coordinates": 25
+    },
+    {
+      "filename": "JC-202410-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 118307,
+      "imported_rows": 118307,
+      "invalid_times": 0,
+      "invalid_durations": 28,
+      "missing_coordinates": 26
+    },
+    {
+      "filename": "JC-202411-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 85294,
+      "imported_rows": 85294,
+      "invalid_times": 3,
+      "invalid_durations": 20,
+      "missing_coordinates": 17
+    },
+    {
+      "filename": "JC-202412-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 54833,
+      "imported_rows": 54833,
+      "invalid_times": 0,
+      "invalid_durations": 16,
+      "missing_coordinates": 16
+    },
+    {
+      "filename": "JC-202501-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 50611,
+      "imported_rows": 50611,
+      "invalid_times": 0,
+      "invalid_durations": 21,
+      "missing_coordinates": 19
+    },
+    {
+      "filename": "JC-202502-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 45255,
+      "imported_rows": 45255,
+      "invalid_times": 0,
+      "invalid_durations": 8,
+      "missing_coordinates": 6
+    },
+    {
+      "filename": "JC-202503-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 73293,
+      "imported_rows": 73293,
+      "invalid_times": 0,
+      "invalid_durations": 13,
+      "missing_coordinates": 11
+    },
+    {
+      "filename": "JC-202504-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 81553,
+      "imported_rows": 81553,
+      "invalid_times": 0,
+      "invalid_durations": 23,
+      "missing_coordinates": 22
+    },
+    {
+      "filename": "JC-202505-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 93227,
+      "imported_rows": 93227,
+      "invalid_times": 0,
+      "invalid_durations": 29,
+      "missing_coordinates": 28
+    },
+    {
+      "filename": "JC-202506-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 97124,
+      "imported_rows": 97124,
+      "invalid_times": 0,
+      "invalid_durations": 38,
+      "missing_coordinates": 389
+    },
+    {
+      "filename": "JC-202507-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 107726,
+      "imported_rows": 107726,
+      "invalid_times": 0,
+      "invalid_durations": 49,
+      "missing_coordinates": 335
+    },
+    {
+      "filename": "JC-202508-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 108441,
+      "imported_rows": 108441,
+      "invalid_times": 0,
+      "invalid_durations": 42,
+      "missing_coordinates": 453
+    },
+    {
+      "filename": "JC-202509-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 116071,
+      "imported_rows": 116071,
+      "invalid_times": 0,
+      "invalid_durations": 38,
+      "missing_coordinates": 487
+    },
+    {
+      "filename": "JC-202510-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 104205,
+      "imported_rows": 104205,
+      "invalid_times": 0,
+      "invalid_durations": 24,
+      "missing_coordinates": 621
+    },
+    {
+      "filename": "JC-202511-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 76724,
+      "imported_rows": 76724,
+      "invalid_times": 7,
+      "invalid_durations": 29,
+      "missing_coordinates": 469
+    },
+    {
+      "filename": "JC-202512-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 48474,
+      "imported_rows": 48474,
+      "invalid_times": 0,
+      "invalid_durations": 57,
+      "missing_coordinates": 606
+    },
+    {
+      "filename": "JC-202601-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 40044,
+      "imported_rows": 40044,
+      "invalid_times": 0,
+      "invalid_durations": 95,
+      "missing_coordinates": 825
+    },
+    {
+      "filename": "JC-202602-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 25809,
+      "imported_rows": 25809,
+      "invalid_times": 0,
+      "invalid_durations": 50,
+      "missing_coordinates": 410
+    },
+    {
+      "filename": "JC-202603-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 62367,
+      "imported_rows": 62367,
+      "invalid_times": 0,
+      "invalid_durations": 41,
+      "missing_coordinates": 431
+    },
+    {
+      "filename": "JC-202604-citibike-tripdata.csv",
+      "schema_version": "new",
+      "source_rows": 82272,
+      "imported_rows": 82272,
+      "invalid_times": 0,
+      "invalid_durations": 53,
+      "missing_coordinates": 435
+    }
+  ]
+}

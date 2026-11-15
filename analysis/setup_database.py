@@ -1,3 +1,4 @@
+# Historical exploration; superseded by ingest.py and build_portfolio.py. See README.md.
 """
 setup_database.py — Load all 127 Citi Bike CSV files into a unified DuckDB database.
 

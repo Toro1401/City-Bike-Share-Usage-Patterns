@@ -1,3 +1,4 @@
+# Historical exploration; superseded by ingest.py and build_portfolio.py. See README.md.
 """
 export_dashboard_data.py — Export aggregated analysis data as JSON for the web dashboard.
 

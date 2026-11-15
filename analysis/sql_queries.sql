@@ -1,3 +1,4 @@
+-- HISTORICAL EXPLORATION. Verified dashboard uses audited_queries.sql and explicit ID quarantine.
 -- ============================================================================
 -- City Bike-Share Usage Patterns — SQL Analysis Queries
 -- Dataset: Citi Bike Jersey City, Sep 2015 – Apr 2026

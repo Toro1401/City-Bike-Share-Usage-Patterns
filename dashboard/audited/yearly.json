@@ -1,0 +1,122 @@
+[
+  {
+    "yr": 2015,
+    "trips": 52845,
+    "avg_minutes": 13.594093102469486,
+    "median_minutes": 7.083333333333333,
+    "members": 47244,
+    "observed_months": 4,
+    "first_observed": "2015-09-21 14:53:16",
+    "last_observed": "2015-12-31 23:45:20"
+  },
+  {
+    "yr": 2016,
+    "trips": 247489,
+    "avg_minutes": 11.393359637532711,
+    "median_minutes": 6.5,
+    "members": 231638,
+    "observed_months": 12,
+    "first_observed": "2016-01-01 00:02:52",
+    "last_observed": "2016-12-31 23:44:50"
+  },
+  {
+    "yr": 2017,
+    "trips": 259357,
+    "avg_minutes": 10.08383624373611,
+    "median_minutes": 5.716666666666667,
+    "members": 245740,
+    "observed_months": 11,
+    "first_observed": "2017-01-01 00:21:32",
+    "last_observed": "2017-12-31 23:33:55"
+  },
+  {
+    "yr": 2018,
+    "trips": 353757,
+    "avg_minutes": 9.66483772759267,
+    "median_minutes": 5.583333333333333,
+    "members": 331677,
+    "observed_months": 12,
+    "first_observed": "2018-01-01 00:01:45.814",
+    "last_observed": "2018-12-31 23:25:49.609"
+  },
+  {
+    "yr": 2019,
+    "trips": 404797,
+    "avg_minutes": 10.130402358054367,
+    "median_minutes": 5.75,
+    "members": 361877,
+    "observed_months": 12,
+    "first_observed": "2019-01-01 00:01:32.108",
+    "last_observed": "2019-12-31 23:45:20.978"
+  },
+  {
+    "yr": 2020,
+    "trips": 336498,
+    "avg_minutes": 20.86767950081922,
+    "median_minutes": 10.233333333333333,
+    "members": 231495,
+    "observed_months": 12,
+    "first_observed": "2020-01-01 00:04:50.192",
+    "last_observed": "2020-12-31 23:48:34.575"
+  },
+  {
+    "yr": 2021,
+    "trips": 629719,
+    "avg_minutes": 16.92475675658508,
+    "median_minutes": 8.6,
+    "members": 374480,
+    "observed_months": 12,
+    "first_observed": "2021-01-01 00:03:35.51",
+    "last_observed": "2021-12-31 23:56:41"
+  },
+  {
+    "yr": 2022,
+    "trips": 875001,
+    "avg_minutes": 13.725190866448534,
+    "median_minutes": 7.316666666666666,
+    "members": 573769,
+    "observed_months": 12,
+    "first_observed": "2022-01-01 00:10:20",
+    "last_observed": "2022-12-31 23:58:26"
+  },
+  {
+    "yr": 2023,
+    "trips": 965283,
+    "avg_minutes": 11.118705464269718,
+    "median_minutes": 6.416666666666667,
+    "members": 711752,
+    "observed_months": 12,
+    "first_observed": "2023-01-01 00:06:36",
+    "last_observed": "2023-12-31 23:59:57"
+  },
+  {
+    "yr": 2024,
+    "trips": 1044822,
+    "avg_minutes": 10.153555629571352,
+    "median_minutes": 6.166666666666667,
+    "members": 790617,
+    "observed_months": 12,
+    "first_observed": "2024-01-01 00:06:21",
+    "last_observed": "2024-12-31 23:54:10.246"
+  },
+  {
+    "yr": 2025,
+    "trips": 1002344,
+    "avg_minutes": 9.593111596417996,
+    "median_minutes": 6.033333333333333,
+    "members": 780211,
+    "observed_months": 12,
+    "first_observed": "2025-01-01 00:03:11.201",
+    "last_observed": "2025-12-31 23:59:00.943"
+  },
+  {
+    "yr": 2026,
+    "trips": 210240,
+    "avg_minutes": 9.970538115169965,
+    "median_minutes": 5.816666666666666,
+    "members": 171351,
+    "observed_months": 4,
+    "first_observed": "2026-01-01 00:05:49.106",
+    "last_observed": "2026-04-30 23:59:26.524"
+  }
+]

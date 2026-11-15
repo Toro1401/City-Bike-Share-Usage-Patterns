@@ -1,0 +1,2 @@
+duckdb==2.0.0
+# Legacy exploratory scripts additionally require pandas, numpy, matplotlib and seaborn.

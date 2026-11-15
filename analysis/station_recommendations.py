@@ -1,3 +1,4 @@
+# Historical exploration; superseded by ingest.py and build_portfolio.py. See README.md.
 """
 station_recommendations.py — Identify optimal locations for new bike-share stations.
 
