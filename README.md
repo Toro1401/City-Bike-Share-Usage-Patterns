@@ -1,12 +1,10 @@
 # Citi Bike Operations Analysis
 
-**Decision:** understand when trips occur and which station observations show departure/arrival imbalance, while making source gaps and station-identity uncertainty visible.
-
-SQL/DuckDB analysis of 127 Jersey City source CSVs, spanning September 2015–April 2026. A strict import manifest accounts for every parsed record; verified aggregates power a standalone offline dashboard.
+This DuckDB project looks at when people ride in Jersey City and where departures and arrivals differ. It uses 127 Citi Bike CSVs from September 2015 through April 2026. The import manifest accounts for every parsed record, and the offline dashboard shows the resulting aggregates along with gaps in coverage and uncertainty about station identity.
 
 ## Explore
 
-- **[Interactive dashboard](dashboard/index.html)** — download/open the file directly; no account, server or map service required.
+- Open the [interactive dashboard](dashboard/index.html) directly in your browser. It runs offline without an account, a server, or a map service.
 - [Audit and source-file manifest](dashboard/audited/audit.json), [verified SQL](analysis/audited_queries.sql), [method and KPI definitions](docs/METHODOLOGY.md), [PRD](PRD.md).
 
 ![Dashboard preview](docs/dashboard-preview.svg)
@@ -21,7 +19,7 @@ SQL/DuckDB analysis of 127 Jersey City source CSVs, spanning September 2015–Ap
 | Valid trips | 6,382,152 |
 | Missing month inside the observed date range | August 2017 |
 
-The conflicting IDs have different timestamps; they are not identical rows. All versions are excluded rather than picking one arbitrarily. The original database and CSVs are preserved. Station identity uses **ID + name + year**; old IDs are not merged into new ones without evidence. Endpoint movements/coordinate anomalies are flagged. Counts are observations, not a verified count of physical stations.
+The conflicting ride IDs have different timestamps, so the import quarantines every row with a conflicting ID and keeps the original database and CSVs intact. The analysis groups station observations by ID, name, and year. It keeps old and new IDs separate unless there is evidence they refer to the same station. The counts describe those groups. They do not establish how many physical stations exist. The analysis also flags shifts in endpoint coordinates.
 
 ## Reproduce
 
@@ -36,22 +34,22 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
-Source: [Citi Bike system data](https://citibikenyc.com/system-data) and [download archive](https://s3.amazonaws.com/tripdata/index.html). Retrieve Jersey City files, not the entire NYC network. Dataset coverage can change with the files you download; the ledger and missing-month checks describe the supplied snapshot. Check source terms before reuse. CSVs and databases are not redistributed.
+Source: [Citi Bike system data](https://citibikenyc.com/system-data) and [download archive](https://s3.amazonaws.com/tripdata/index.html). Download the Jersey City files. The ledger and missing-month checks apply to the files you supply, so the coverage may differ from the snapshot above. Check the source terms before reuse. The repository excludes the CSVs and databases.
 
-The importer uses strict CSV parsing, writes a separate staging DB and records source/import counts and invalid fields per file. A failed import leaves a diagnostic `.building.duckdb`; choose a fresh output path after resolving it. It never silently skips malformed CSV rows. Exporting from the legacy `citibike.duckdb` is supported but reports absent file lineage explicitly.
+The importer writes to a separate staging database and logs source counts, imported counts, and invalid fields for each file. It stops on malformed CSV rows and leaves a `.building.duckdb` file for diagnosis. After fixing the problem, choose a fresh output path. You can also export from the legacy `citibike.duckdb`. The export reports that file-level lineage is unavailable.
 
 ## Dashboard and decisions
 
-Year selector updates trips, membership, median duration, comparable-year growth and station observations. Station search filters only the station table/coordinate plot and is labeled accordingly. Coordinate plot is a longitude/latitude scatter, not a street map; flagged shifts are excluded. Download the displayed table for inspection.
+The year selector updates trip counts, membership, median duration, growth for comparable years, and station observations. The station search filters the station table and coordinate plot only. The plot uses longitude and latitude and omits flagged coordinate shifts. You can download the filtered table.
 
-Use departure/arrival differences to shortlist sites for operational investigation. Confirm bike availability, capacity, rebalancing and weather before changing deployment. Observed trips cannot establish unmet demand or stockouts. New-station recommendations from the previous heuristic are not validated and are not shown in the verified dashboard.
+Use the difference between departures and arrivals to decide which sites to look into. Before moving bikes or changing capacity, check availability, capacity, rebalancing, and weather. Trip records alone cannot show stockouts or unmet demand. The dashboard omits the previous, unvalidated recommendations for new stations.
 
 ## Historical assets
 
-`analysis/setup_database.py`, `run_analysis.py`, `export_dashboard_data.py`, `sql_queries.sql`, `station_recommendations.py` and old `dashboard/data/` files are historical exploration. The supported path is `ingest.py` → `build_portfolio.py` → `dashboard/audited/` + `dashboard/index.html`. The old station recommendation claims are superseded; do not use old generated files as operational evidence.
+`analysis/setup_database.py`, `run_analysis.py`, `export_dashboard_data.py`, `sql_queries.sql`, `station_recommendations.py` and old `dashboard/data/` files are historical exploration. Run `ingest.py` and then `build_portfolio.py` to produce `dashboard/audited/` and `dashboard/index.html`. Use those outputs for operational review. The older exports and station recommendations are exploratory.
 
-No full-year comparison is displayed unless both years span January–December with 12 observed months. 2015, 2017 and 2026 are not eligible as full-year periods. Twelve observed months alone do not prove upstream source completeness.
+The dashboard compares full years only when both have observations in all 12 months from January through December. That excludes 2015, 2017, and 2026. Even with observations in all 12 months, the source can still be incomplete.
 
 ## Repeatable verification
 
-Run `python scripts/verify.py` in the project Python environment. It validates local documentation links and executes the reviewed command arrays in `ai-toolkit.json` without a shell. Read the manifest before running. Results are saved locally in `.verification/latest.json` (ignored by Git). Dashboard projects also require Node.js on PATH for their JavaScript/filter smoke checks. Passing local checks does not establish actual-browser, deployment or live-service acceptance. See AGENTS.md and CLAUDE.md for cross-client workflow instructions.
+Review the commands in `ai-toolkit.json`, then run `python scripts/verify.py` in the project’s Python environment. The script checks local documentation links and runs those commands without a shell. It saves the results in `.verification/latest.json`, which Git ignores. Dashboard JavaScript and filter checks require Node.js on PATH. The local checks do not cover browser behavior, deployment, or live services. See AGENTS.md and CLAUDE.md for the project workflows.

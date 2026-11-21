@@ -1,5 +1,3 @@
 # Historical exports
 
-These JSON files belong to the earlier exploratory dashboard and are not consumed by the current index.html.
-They do not apply the current conflicting-ID quarantine or station-observation rules.
-Use ../audited/ and analysis/build_portfolio.py for verified data. See the repository README.
+The earlier dashboard used these JSON files. They predate the rules for quarantining conflicting ride IDs and grouping station observations. The current index.html uses the verified exports in ../audited/. Run analysis/build_portfolio.py to rebuild them. See the repository README for the full workflow.
